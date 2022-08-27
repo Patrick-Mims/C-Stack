@@ -10,12 +10,32 @@ struct Stack
   int size;
 };
 
-static void isEmpty(stack_t stack)
+stack_t new_stack(int size)
+{
+  stack_t stack;
+
+  if((stack = malloc(sizeof(stack_t))) == NULL) exit(EXIT_FAILURE);
+
+  if((stack->data = malloc(size * sizeof(int))) == NULL)
+  {
+    free(stack);
+    exit(EXIT_FAILURE);
+  }
+
+  stack->ptr = 0;
+  stack->size = size;
+
+  printf("Stack Created\n");
+
+  return stack;
+}
+
+int isEmpty(stack_t stack)
 {
   return stack->ptr == 0;
 }
 
-static void isFull(stack_t stack)
+int isFull(stack_t stack)
 {
   return stack->ptr == stack->size;
 }
@@ -30,4 +50,6 @@ void push(stack_t stack, int item)
 
   stack->data[stack->ptr] = item;
   stack->ptr++;
+
+  printf("Push Successfull->[ %d ]\n", item);
 }
