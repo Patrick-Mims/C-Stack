@@ -18,7 +18,7 @@ stack_t new_stack(int size)
 
   if((stack->data = malloc(size * sizeof(int))) == NULL)
   {
-    free(stack);
+    free(stack); // Free stack before exit
     exit(EXIT_FAILURE);
   }
 
@@ -51,5 +51,5 @@ void push(stack_t stack, int item)
   stack->data[stack->ptr] = item;
   stack->ptr++;
 
-  printf("Push Successfull->[ %d ]\n", item);
+  printf("Push Successful ->[ %d ]\n", item);
 }
