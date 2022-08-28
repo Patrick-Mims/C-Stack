@@ -10,6 +10,10 @@ int main(void)
   stack_t stack = new_stack(INDEX);
 
   push(stack, 50);
+  peek();
+
+  push(stack, 100);
+  peek();
 
   return 0;
 }

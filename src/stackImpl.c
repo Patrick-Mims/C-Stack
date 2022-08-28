@@ -51,5 +51,11 @@ void push(stack_t stack, int item)
   stack->data[stack->ptr] = item;
   stack->ptr++;
 
-  printf("Push Successful ->[ %d ]\n", item);
+  printf("stack->[ %d ]\n", item);
+}
+
+void peek()
+{
+  stack_t stack;
+  printf("Peek: %d\n", stack->ptr);
 }
