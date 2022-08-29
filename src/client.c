@@ -15,5 +15,7 @@ int main(void)
   push(stack, 100);
   peek();
 
+  printf("Testing...");
+
   return 0;
 }
