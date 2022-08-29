@@ -40,6 +40,18 @@ int isFull(stack_t stack)
   return stack->ptr == stack->size;
 }
 
+void pop(stack_t stack)
+{
+  if(isEmpty(stack))
+  {
+    printf("Stack is empty");
+    exit(EXIT_FAILURE);
+  }
+
+  stack->ptr--;
+  stack->data[stack->ptr];
+}
+
 void push(stack_t stack, int item)
 {
   if(isFull(stack))

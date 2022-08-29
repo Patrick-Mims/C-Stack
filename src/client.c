@@ -9,13 +9,19 @@ int main(void)
 {
   stack_t stack = new_stack(INDEX);
 
-  push(stack, 50);
-  peek();
-
   push(stack, 100);
   peek();
 
-  printf("Testing...");
+  push(stack, 200);
+  peek();
+
+  push(stack, 300);
+  peek();
+
+  printf("Testing...\n");
+
+  pop(stack);
+  peek();
 
   return 0;
 }
