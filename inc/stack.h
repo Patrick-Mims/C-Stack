@@ -4,6 +4,7 @@
 typedef struct Stack *stack_t; // Incomplete Type
 
 stack_t new_stack();
+
 int pop(stack_t);
 int isEmpty(stack_t);
 int isFull(stack_t);
