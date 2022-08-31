@@ -25,5 +25,7 @@ int main(void)
 
   push(stack, 9000);
 
+  /*comment for testing*/
+
   return 0;
 }
