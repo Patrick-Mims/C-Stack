@@ -23,6 +23,7 @@ int main(void)
   pop(stack);
   peek();
 
+  push(stack, 9000);
 
   return 0;
 }
