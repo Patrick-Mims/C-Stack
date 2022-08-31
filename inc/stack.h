@@ -11,5 +11,6 @@ int isFull(stack_t);
 void display_stack(stack_t);
 void push(stack_t, int);
 void peek();
+void test();
 
 #endif
