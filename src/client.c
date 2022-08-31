@@ -23,5 +23,6 @@ int main(void)
   pop(stack);
   peek();
 
+
   return 0;
 }
