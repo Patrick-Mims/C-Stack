@@ -5,6 +5,7 @@
 
 struct Stack
 {
+  char name[100];
   int *data; // Dynamic Array
   int ptr;
   int size;
@@ -52,7 +53,7 @@ void pop(stack_t stack)
   stack->data[stack->ptr];
 }
 
-void push(stack_t stack, int item)
+void push(stack_t stack, const int item)
 {
   if(isFull(stack))
   {

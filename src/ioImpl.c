@@ -14,7 +14,7 @@ void read_data()
   FILE *fp = NULL;
   char line[INDEX] = {0};
 
-  if((fp = fopen("names.txt", "r")) == NULL) 
+  if((fp = fopen("names.txt", "r")) == NULL)
   {
     printf("File doesn't exist\n");
     exit(EXIT_FAILURE);
@@ -22,7 +22,11 @@ void read_data()
 
   while(fgets(line, size, fp))
   {
-    printf("%s\n", line);
+    printf("%s", line);
+    /* STOP: push should use push with a different data type
+     * I want to use a char or c-string
+     * push(name, line);
+     * * */
   }
 
   fclose(fp);
