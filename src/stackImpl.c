@@ -5,7 +5,7 @@
 
 struct Stack
 {
-  char name[100];
+  char *name;
   int *data; // Dynamic Array
   int ptr;
   int size;
@@ -18,6 +18,12 @@ stack_t new_stack(int size)
   if((stack = malloc(sizeof(stack_t))) == NULL) exit(EXIT_FAILURE);
 
   if((stack->data = malloc(size * sizeof(int))) == NULL)
+  {
+    free(stack); // Free stack before exit
+    exit(EXIT_FAILURE);
+  }
+
+  if((stack->name = malloc(size * sizeof(char *))) == NULL)
   {
     free(stack); // Free stack before exit
     exit(EXIT_FAILURE);
