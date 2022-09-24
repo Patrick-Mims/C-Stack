@@ -3,12 +3,14 @@
 
 #include "io.h"
 #include "stack.h"
+#include "photo_stack.h"
 
 #define INDEX 20
 
 int main(void)
 {
   stack_t stack = new_stack(INDEX);
+  photo_t photo = NewStackPhoto(INDEX);
 
   push(stack, 100);
   peek();
@@ -28,6 +30,7 @@ int main(void)
 
   read_data();
 
+//  LibraryInit();
 
   /*comment for testing*/
 
